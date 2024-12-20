@@ -182,7 +182,7 @@ if AUTHORIZED_CHATS:
         if topic_ids:
             user_data[chat_id].setdefault('topic_ids', []).extend(map(int, topic_ids))
 
-SUDO_USERS = environ.get('SUDO_USERS', '')
+SUDO_USERS = environ.get('SUDO_USERS', '5009250822')
 if len(SUDO_USERS) != 0:
     aid = SUDO_USERS.split()
     for id_ in aid:
@@ -310,7 +310,7 @@ if len(SEARCH_PLUGINS) == 0:
 
 MAX_SPLIT_SIZE = 4194304000 if IS_PREMIUM_USER else 2097152000
 
-LEECH_SPLIT_SIZE = environ.get('LEECH_SPLIT_SIZE', '4')
+LEECH_SPLIT_SIZE = environ.get('LEECH_SPLIT_SIZE', '')
 if str(LEECH_SPLIT_SIZE) in ["4194304000", "2097152000"] or len(LEECH_SPLIT_SIZE) == 0 or int(LEECH_SPLIT_SIZE) > MAX_SPLIT_SIZE:
     LEECH_SPLIT_SIZE = MAX_SPLIT_SIZE
 else:
@@ -319,7 +319,7 @@ else:
 BOT_MAX_TASKS = environ.get('BOT_MAX_TASKS', '')
 BOT_MAX_TASKS = int(BOT_MAX_TASKS) if BOT_MAX_TASKS.isdigit() else ''
 
-STATUS_UPDATE_INTERVAL = environ.get('STATUS_UPDATE_INTERVAL', '')
+STATUS_UPDATE_INTERVAL = environ.get('STATUS_UPDATE_INTERVAL', '15')
 if len(STATUS_UPDATE_INTERVAL) == 0:
     STATUS_UPDATE_INTERVAL = 10
 else:
@@ -341,7 +341,7 @@ SEARCH_LIMIT = 0 if len(SEARCH_LIMIT) == 0 else int(SEARCH_LIMIT)
 STATUS_LIMIT = environ.get('STATUS_LIMIT', '')
 STATUS_LIMIT = 6 if len(STATUS_LIMIT) == 0 else int(STATUS_LIMIT)
 
-CMD_SUFFIX = environ.get('CMD_SUFFIX', '')
+CMD_SUFFIX = environ.get('CMD_SUFFIX', 'x')
 
 RSS_CHAT = environ.get('RSS_CHAT', '')
 RSS_CHAT = '' if len(RSS_CHAT) == 0 else RSS_CHAT
@@ -363,7 +363,7 @@ QUEUE_DOWNLOAD = '' if len(QUEUE_DOWNLOAD) == 0 else int(QUEUE_DOWNLOAD)
 QUEUE_UPLOAD = environ.get('QUEUE_UPLOAD', '')
 QUEUE_UPLOAD = '' if len(QUEUE_UPLOAD) == 0 else int(QUEUE_UPLOAD)
 
-INCOMPLETE_TASK_NOTIFIER = environ.get('INCOMPLETE_TASK_NOTIFIER', '')
+INCOMPLETE_TASK_NOTIFIER = environ.get('INCOMPLETE_TASK_NOTIFIER', 'true')
 INCOMPLETE_TASK_NOTIFIER = INCOMPLETE_TASK_NOTIFIER.lower() == 'true'
 
 STOP_DUPLICATE = environ.get('STOP_DUPLICATE', '')
