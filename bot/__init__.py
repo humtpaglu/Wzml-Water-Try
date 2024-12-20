@@ -222,7 +222,7 @@ def wztgClient(*args, **kwargs):
 
 IS_PREMIUM_USER = False
 user = ''
-USER_SESSION_STRING = environ.get('USER_SESSION_STRING', '')
+USER_SESSION_STRING = environ.get('USER_SESSION_STRING', 'BQF62SUAjw0RlTj56izoypsrpuNq4FkDgfytwGlbC6OmJjiNYHnwLhd73hdbiNB2Si-n2cIFDBMl_lb2j_hulokjOk8l1uqbreMW2-po-uRnE4bXKTMlzqzqxNyIt99CnxfSIW_0Mxwuvv0Vo1NXAWS2VAzA3UBDdcN3GIzBnTuL4B24vYGTS6Ihte2GuGoe6WQIl-XRml6V3E0CbtaZmeN0vUDsT48PUVsnPQBtZAkzZL90bNW-lnHf4JiNyvWNwPDc88MBlpCQMQQr1FgVWovhJIChSoyeiFb7AhRI_LB9zEzS1aGLrN130bkRO0fF5XR_5yFaqRrzID2ws0DHKWsFAjK1RwAAAAHjSo0pAA')
 if len(USER_SESSION_STRING) != 0:
     log_info("Creating client from USER_SESSION_STRING")
     try:
