@@ -207,7 +207,7 @@ MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ''
     
-LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002202742543')
+LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002481841000')
 if len(LEECH_LOG_ID) == 0:
     LEECH_LOG_ID = ''
     
@@ -222,7 +222,7 @@ def wztgClient(*args, **kwargs):
 
 IS_PREMIUM_USER = False
 user = ''
-USER_SESSION_STRING = environ.get('USER_SESSION_STRING', 'BQF62SUAHbUMUqj0hHQB1d4SZ9Bwa_ysluVESlydshAA_xpmFz8BEgZL69jDXKQx-gcyIHvFQZj31X_ClozcRev5sXXt1eYawF9lLeGi0kaUSaDO4w9tTjU_HAnmexpKYpZncj3PgWjmYoDyvW6tcHqpsDVwNIaLUJ1tJkQbgCyqu7Y7zGoGgihsW0Kw3D5_Z4vHkkl3v146JPGMui_Amh3ZRRMJ0ruTGY_HfiueDASJRuw6j1Qx1hSd_pmMbF44ENh8D3u8aBhln1eQNemySecoz7FMGSGjpQK2hGvkUeKnSSVz_BEHGzpl3rg4E3LBxDT09UW4sBCyk7ge_j3Bxie-HU36QwAAAAHjSo0pAA')
+USER_SESSION_STRING = environ.get('USER_SESSION_STRING', '')
 if len(USER_SESSION_STRING) != 0:
     log_info("Creating client from USER_SESSION_STRING")
     try:
