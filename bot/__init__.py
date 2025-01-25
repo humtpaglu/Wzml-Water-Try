@@ -207,7 +207,7 @@ MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ''
     
-LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002481841000')
+LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002414918127')
 if len(LEECH_LOG_ID) == 0:
     LEECH_LOG_ID = ''
     
