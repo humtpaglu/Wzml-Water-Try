@@ -45,4 +45,4 @@ tgcrypto
 uv
 uvloop
 xattr
-yt-dlp[default]
+yt-dlp==2025.3.31
