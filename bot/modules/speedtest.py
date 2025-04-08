@@ -11,11 +11,11 @@ from bot.helper.ext_utils.bot_utils import get_readable_file_size, new_task
 
 @new_task
 async def speedtest(_, message):
-    speed = await sendMessage(message, "<blockquote><i>Initiating Speedtest...</i></blockquote>")
+    speed = await sendMessage(message, "<pre><i>Initiating Speedtest...</i></pre>")
     try:
         test = Speedtest()
     except ConfigRetrievalError:
-        await editMessage(speed, "<blockquote><b>ERROR:</b> <i>Can't connect to Server at the Moment, Try Again Later !</i></blockquote>")
+        await editMessage(speed, "<pre><b>ERROR:</b> <i>Can't connect to Server at the Moment, Try Again Later !</i></pre>")
         return
     test.get_best_server()
     test.download()
@@ -23,7 +23,7 @@ async def speedtest(_, message):
     test.results.share()
     result = test.results.dict()
     path = result['share']
-    string_speed = f'''<blockquote expandable>
+    string_speed = f'''<pre>
 <b><i>SPEEDTEST INFO</i></b>
 <b>Upload:</b> <code>{get_readable_file_size(result['upload'] / 8)}/s</code>
 <b>Download:</b>  <code>{get_readable_file_size(result['download'] / 8)}/s</code>
@@ -46,7 +46,7 @@ async def speedtest(_, message):
 <b>Longitude:</b> <code>{result['client']['lon']}</code>
 <b>Country:</b> <code>{result['client']['country']}</code>
 <b>ISP:</b> <code>{result['client']['isp']}</code>
-<b>ISP Rating:</b> <code>{result['client']['isprating']}</code> </blockquote>
+<b>ISP Rating:</b> <code>{result['client']['isprating']}</code> </pre>
 '''
     try:
         pho = await sendMessage(message, string_speed, photo=path)
